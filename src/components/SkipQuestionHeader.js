@@ -7,12 +7,10 @@ import QuestionDetailsMenu from './QuestionDetailsMenu'
 class SkipQuestionHeader extends Component {
 
   goToQ (qn) {
-    console.log("go to " + qn);
     this.props.history.push('/skip/'+qn)
   }
 
   render () {
-    console.log(this.props)
     const qn = parseInt(this.props.qn);
     const questions = this.props.questions;
     const curQData = questions[qn];

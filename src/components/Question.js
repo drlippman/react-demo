@@ -3,10 +3,6 @@ import './Question.css';
 
 class Question extends Component {
 
-  submitQuestion () {
-
-  }
-
   componentDidUpdate () {
     this.loadIfNeeded ()
   }
@@ -19,6 +15,10 @@ class Question extends Component {
     if (!questionContentLoaded && this.props.active) {
       this.props.loadQuestion(this.props.qn);
     }
+    if (questionContentLoaded) {
+      setTimeout(window.drawPics, 100);
+      window.rendermathnode(document.getElementById("questionwrap" + this.qn));
+    }
   }
 
   render () {
@@ -29,14 +29,14 @@ class Question extends Component {
       return <div className="questionwrap"><p>Loading...</p></div>
     }
     return (
-      <div class="questionwrap">
+      <div className="questionwrap" id={'questionwrap'+this.props.qn}>
         <div
           dangerouslySetInnerHTML={{__html: this.props.qdata.html}}
           id={'questionwrap' + this.props.qn}
         ></div>
         {this.props.qdata.canreattempt &&
           <p><br/>
-            <button onClick={this.submitQuestion}>{ submitLabel }</button>
+            <button onClick={()=>this.props.submitQuestion(this.props.qn)}>{ submitLabel }</button>
           </p>
         }
       </div>

@@ -1,5 +1,5 @@
 {
 	"qn": 0,
-  "canreattempt": false,
+  "canreattempt": true,
   "html": "Given `P = ( 3 , -4 )` and `Q = ( 1 , -2 )`, find the components of `vec(PQ)`<br\/><br\/> `vec(PQ)` = &lt; <input onfocus=\"console.log('hi')\" type=\"text\"  size=\"1\" name=qn5000 id=qn5000 value=\"\"\/> , <input type=\"text\"  size=\"1\" name=qn5001 id=qn5001 value=\"\"\/> &gt;"
 }

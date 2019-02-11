@@ -25,6 +25,7 @@ class Skip extends Component {
             qn={i}
             active={i == qn}
             loadQuestion={this.props.loadQuestion}
+            submitQuestion={this.props.submitQuestion}
           ></Question>
         </div>
       ));

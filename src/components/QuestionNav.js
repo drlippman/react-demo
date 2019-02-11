@@ -9,7 +9,7 @@ class QuestionNav extends Component {
     var out = [];
 
     for (let i=0; i < questions.length; i++) {
-      if (questions[i].status === 0) {
+      if (parseInt(questions[i].status) === 0) {
         //unattempted
         out.push({
           "class": "far fa-circle bluetext qstatusicon",
@@ -21,13 +21,13 @@ class QuestionNav extends Component {
           "class": "fas fa-circle bluetext qstatusicon",
           "alt": "Attempted"
         })
-      } else if (questions[i].score === 0) {
+      } else if (parseFloat(questions[i].score) === 0) {
         //wrong
         out.push({
           "class": "fas fa-times-circle redtext qstatusicon",
           "alt": "Incorrect"
         })
-      } else if (questions[i].score === questions[i].possible) {
+      } else if (parseFloat(questions[i].score) === parseFloat(questions[i].possible)) {
         //full score
         out.push({
           "class": "fas fa-check-circle greentext qstatusicon",

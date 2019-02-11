@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Launch from './views/Launch';
 import Skip from './views/Skip';
-import $ from 'jquery';
 import './App.css';
 
 class App extends Component {
@@ -11,11 +10,13 @@ class App extends Component {
     this.state = {
       assessInfo: null,
     };
+    this.loadQuestion = this.loadQuestion.bind(this);
+    this.submitQuestion = this.submitQuestion.bind(this);
   }
 
   componentDidMount () {
     if (this.state.assessInfo === null) {
-      $.ajax({
+      window.$.ajax({
         url: '/data/assessdata.json', //adjust for path
         dataType: 'json'
       }).done((response) => {
@@ -28,19 +29,30 @@ class App extends Component {
 
   loadQuestion (qn) {
     if (this.state.assessInfo.questions[qn].html === null) {
-      $.ajax({
+      window.$.ajax({
         url: '/data/getq' + qn + '.json',
         dataType: 'json'
       }).done((response) => {
         var newInfo = {...this.state.assessInfo};
-        newInfo[qn] = response;
+        for (let i in response) {
+          newInfo.questions[qn][i] = response[i];
+        }
         this.setState({assessInfo: newInfo});
       })
     }
   }
 
-  startAssess () {
-    console.log("button clicked");
+  submitQuestion (qn) {
+    window.$.ajax({
+      url: '/data/scoreq' + qn + '.json',
+      dataType: 'json'
+    }).done((response) => {
+      var newInfo = {...this.state.assessInfo};
+      for (let i in response) {
+        newInfo.questions[qn][i] = response[i];
+      }
+      this.setState({assessInfo: newInfo});
+    })
   }
 
   render() {
@@ -60,6 +72,7 @@ class App extends Component {
                 <Skip {...props}
                   assessInfo={this.state.assessInfo}
                   loadQuestion={this.loadQuestion}
+                  submitQuestion={this.submitQuestion}
                 />
               }
             />
