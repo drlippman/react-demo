@@ -1,0 +1,21 @@
+{
+	"qn": 0,
+  "status": 1,
+  "score": 5,
+  "parts": [
+    {
+      "score": 2.5,
+      "possible": 2.5,
+      "attempt": 2,
+      "totattempts": 3
+    },
+    {
+      "score": 2.5,
+      "possible": 2.5,
+      "attempt": 2,
+      "totattempts": 3
+    }
+  ],
+  "attempt": 2,
+  "html": "Given `P = ( 3 , -4 )` and `Q = ( 1 , -2 )`, find the components of `vec(PQ)`<br\/><br\/> `vec(PQ)` = &lt; <div class=\"scoremark green\"><i class=\"fas fa-check-circle\" aria-label=\"Correct\"></i></div><input disabled onfocus=\"console.log('hi')\" class=\"green\" type=\"text\"  size=\"1\" name=qn5000 id=qn5000 value=\"\"\/> , <div class=\"scoremark green\"><i class=\"fas fa-check-circle\" aria-label=\"Correct\"></i></div><input disabled class=\"green\" type=\"text\"  size=\"1\" name=qn5001 id=qn5001 value=\"\"\/> &gt;"
+}

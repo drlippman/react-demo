@@ -1,32 +1,61 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
-import logo from './logo.svg';
+import { HashRouter as Router, Route, Switch, Link } from "react-router-dom";
+import Launch from './views/Launch';
+import Skip from './views/Skip';
+import $ from 'jquery';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      assessInfo: null,
+    };
+  }
+
+  componentDidMount () {
+    if (this.state.assessInfo === null) {
+      $.ajax({
+        url: '/data/assessdata.json', //adjust for path
+        dataType: 'json'
+      }).done((response) => {
+        this.setState({assessInfo: response})
+      }).fail((response) => {
+        console.log("failed to laod assessment data")
+      })
+    }
+  }
+
+  startAssess () {
+    console.log("button clicked");
+  }
+
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    var assessInfoLoaded = (this.state.assessInfo !== null);
+
+    if (!assessInfoLoaded) {
+      return (
+        <div className="app">Loading...</div>
+      )
+    } else {
+      return (
+        <Router>
+          <Switch>
+            <Route
+              path="/skip/:qn"
+              render={(props) =>
+                <Skip {...props} assessInfo={this.state.assessInfo} />
+              }
+            />
+            <Route
+              render={(props) =>
+                <Launch {...props} assessInfo={this.state.assessInfo} />
+              }
+            />
+          </Switch>
+        </Router>
+      );
+    }
   }
 }
 

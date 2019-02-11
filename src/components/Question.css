@@ -1,0 +1,50 @@
+input[type=text] {
+  height: 20px;
+}
+.haseqneditor {
+  margin-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 20px;
+}
+.eqneditortrigger {
+  margin: 0;
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 30px;
+  padding: 4px;
+  vertical-align: bottom;
+}
+input.green {
+  margin-left: 0;
+  border-color: #090;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+input.red {
+  margin-left: 0;
+  border-color: #900;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.scoremark {
+  display: inline-block;
+  height: 20px;
+  padding: 4px;
+  margin-right: 0;
+  border: 1px solid;
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 20px;
+}
+.scoremark.red {
+  border-color: #900;
+  color: #900;
+}
+.scoremark.green {
+  border-color: #090;
+  color: #090;
+}

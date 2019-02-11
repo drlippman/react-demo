@@ -1,0 +1,13 @@
+.inactive {
+  visibility: hidden;
+  position: absolute;
+}
+.questionpane {
+  margin: 15px 15px;
+  width: 700px;
+  overflow: visible;
+}
+.scrollpane {
+  width: 100%;
+  overflow-x: auto;
+}

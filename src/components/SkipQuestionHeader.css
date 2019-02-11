@@ -1,0 +1,31 @@
+#skip-question-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+}
+#skip-question-header > * {
+  margin-right: 10px;
+}
+#skip-question-select {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+}
+.bigicon {
+  font-size: 130%;
+}
+#qprev {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#qnext {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#qprev, #qnext {
+  margin: 0;
+  padding: 3px 8px;
+}

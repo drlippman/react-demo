@@ -1,0 +1,91 @@
+{
+	"name": "Homework 1.1",
+  "intro": "<p>This is <b>the</b> intro</p>",
+  "showscores": true,
+  "timelimit": 20,
+  "resources": [
+    {
+      "title": "Book",
+      "url": "https://www.google.com"
+    },
+    {
+      "title": "Calculator",
+      "url": "https://desmos.com/calculator"
+    }
+  ],
+  "questions": [
+    {
+      "qid": 1,
+      "seed": 23,
+      "status": 0,
+      "score": 0,
+      "parts": [
+        {
+          "score": 0,
+          "possible": 2.5,
+          "attempt": 1,
+          "totattempts": 3
+        },
+        {
+          "score": 0,
+          "possible": 2.5,
+          "attempt": 1,
+          "totattempts": 3
+        }
+      ],
+      "possible": 5,
+      "attempt": 1,
+      "totattempts": 3,
+      "canreattempt": true,
+      "category": "Vectors",
+      "html": null
+    },
+    {
+      "qid": 3,
+      "seed": 45,
+      "status": 1,
+      "score": 5,
+      "parts": [
+        {
+          "score": 2.5,
+          "possible": 2.5,
+          "attempt": 2,
+          "totattempts": 3
+        },
+        {
+          "score": 2.5,
+          "possible": 2.5,
+          "attempt": 2,
+          "totattempts": 3
+        }
+      ],
+      "possible": 5,
+      "attempt": 2,
+      "totattempts": 3,
+      "canreattempt": false,
+      "html": "<p>Add: 2 + 5 = <input size=4 /></p><p>Add: 3 + 8 = <input size=4 /></p>"
+    },
+    {
+      "qid": 7,
+      "seed": 72,
+      "status": 1,
+      "score": 3,
+      "possible": 5,
+      "attempt": 2,
+      "totattempts": 3,
+      "canreattempt": true,
+      "html": null
+    },
+    {
+      "qid": 8,
+      "seed": 12,
+      "status": 1,
+      "score": 0,
+      "possible": 5,
+      "attempt": 2,
+      "totattempts": 3,
+      "canreattempt": false,
+      "html": "<p>Add: 9 + 2 alkjad lka lkadjf kaj klfajf klajd fkljadkf jakldjf klajd fkjadsklfkaldsjfklajdkfjkl akldjsfk kadsfk kljad kjdalsk kldasj fklajkljda fklajklfjda jfakldj klajkja dkfja kjkdsjf alkjfda skjfdkas kaldsjf kadsjf kldasjf kldajsf kladsj fkldasjf kaldsjfkldj fkldjas fka skdasj kfs adkskjfkadjf kljads kljfkdsjf kdsj  = <input size=4 /></p>"
+    }
+  ]
+}

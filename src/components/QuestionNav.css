@@ -1,0 +1,26 @@
+.questionnav {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+}
+.greentext {
+  color: #090;
+}
+.orangetext {
+  color: #AA5D00;
+}
+.redtext {
+  color: #900;
+}
+.bluetext {
+  color: #009;
+}
+.qstatusicon {
+  margin-right: 4px;
+  font-size: 16px;
+}
+.redoicon {
+  display: inline-block;
+  width: 40px;
+  text-align: right;
+}

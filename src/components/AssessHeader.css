@@ -1,0 +1,21 @@
+#assess-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+#assess-header > * {
+  margin-right: 10px;
+}
+#assess-header h1 {
+  margin: .4em 0 .2em;
+}
+.answeredinfo {
+  color: #666666;
+  margin-left: 20px;
+}
+.bigicon {
+  font-size: 130%;
+}

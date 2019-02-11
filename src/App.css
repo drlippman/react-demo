@@ -1,32 +1,41 @@
-.App {
-  text-align: center;
+input[type=submit],input[type=button], button, a.abutton {
+	color: #fff;
+	background-color: #1E74D1;
+	padding: 3px 12px;
+	height: auto;
+}
+input {
+  border: 1px solid #999;
+  padding: 4px 6px;
+  border-radius: 4px;
+
+}
+input[type=submit]:disabled, button:disabled,input[type=button]:disabled, a.abutton:disabled {
+	background-color: #ffffff;
+  color: #666;
+}
+input[type=submit]:hover, button:hover,input[type=button]:hover, a.abutton:hover {
+	background-color: #175aa2;
+}
+input[type=submit]:focus, button:focus,input[type=button]:focus, a.abutton:focus {
+	background-color: #175aa2;
+}
+input[type=submit].secondarybtn,input[type=button].secondarybtn, button.secondarybtn {
+	color: #000;
+	background-color: #eee;
+}
+input[type=submit].secondarybtn:disabled,input[type=button].secondarybtn:disabled, button.secondarybtn:disabled,
+input[type=submit].secondarybtn:disabled:hover,input[type=button].secondarybtn:disabled:hover, button.secondarybtn:disabled:hover {
+	background-color: #ffffff;
+  color: #666;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+input[type=submit].secondarybtn:hover,input[type=button].secondarybtn:hover, button.secondarybtn:hover {
+	background-color: #ddd;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input[type=submit].secondarybtn:focus,input[type=button].secondarybtn:focus, button.secondarybtn:focus {
+	background-color: #ddd;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown-menu a {
+  text-decoration: none;
 }

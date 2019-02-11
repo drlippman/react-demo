@@ -1,0 +1,8 @@
+#timerbox span {
+  margin-left: 4px;
+}
+#timerbox {
+  border: 1px solid #ccc;
+  padding: 5px;
+  cursor: pointer;
+}
