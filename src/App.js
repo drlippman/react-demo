@@ -26,6 +26,19 @@ class App extends Component {
     }
   }
 
+  loadQuestion (qn) {
+    if (this.state.assessInfo.questions[qn].html === null) {
+      $.ajax({
+        url: '/data/getq' + qn + '.json',
+        dataType: 'json'
+      }).done((response) => {
+        var newInfo = {...this.state.assessInfo};
+        newInfo[qn] = response;
+        this.setState({assessInfo: newInfo});
+      })
+    }
+  }
+
   startAssess () {
     console.log("button clicked");
   }
@@ -44,7 +57,10 @@ class App extends Component {
             <Route
               path="/skip/:qn"
               render={(props) =>
-                <Skip {...props} assessInfo={this.state.assessInfo} />
+                <Skip {...props}
+                  assessInfo={this.state.assessInfo}
+                  loadQuestion={this.loadQuestion}
+                />
               }
             />
             <Route

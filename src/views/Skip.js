@@ -21,8 +21,10 @@ class Skip extends Component {
       questionArray.push((
         <div key={i} className={i == qn ? "" : "inactive"}>
           <Question
+            qdata={this.props.assessInfo.questions[i]}
             qn={i}
             active={i == qn}
+            loadQuestion={this.props.loadQuestion}
           ></Question>
         </div>
       ));

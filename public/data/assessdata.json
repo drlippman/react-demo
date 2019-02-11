@@ -63,7 +63,7 @@
       "attempt": 2,
       "totattempts": 3,
       "canreattempt": false,
-      "html": "<p>Add: 2 + 5 = <input size=4 /></p><p>Add: 3 + 8 = <input size=4 /></p>"
+      "html": "<p>Add: 2 + 5 = <input size=4 /></p><p>Add: `1/3 + 3/8` = <input size=4 /></p>"
     },
     {
       "qid": 7,
